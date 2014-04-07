@@ -1,15 +1,16 @@
 # This file is based on https://github.com/dotcloud/docker-registry/Dockerfile.
 # Changes:
+#   base image
 #   Mounting VOLUME with credentilas obtained by google/cloud-sdk
 #   ENV vars
 #   config.yml
 #   overwrite run.sh (set BOTO_PATH, use 1 gunirorn worker)
 
-FROM ubuntu:13.04
+FROM debian:jessie
 
 RUN apt-get update; \
     apt-get install -y git-core build-essential python-dev \
-    libevent1-dev python-openssl liblzma-dev wget; \
+    libevent-dev python-openssl liblzma-dev wget; \
     rm /var/lib/apt/lists/*_*
 RUN cd /tmp; wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 RUN cd /tmp; python ez_setup.py; easy_install pip; \
