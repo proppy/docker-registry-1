@@ -1,4 +1,7 @@
-FROM docker-registry-filesystem
+FROM debian:jessie
+
+ADD . /tmp
+RUN /tmp/build.sh /tmp
 
 # This is the default port that docker-registry is listening on.
 # Needs to be set into 5000 or the value of REGISTRY_PORT environment variable
