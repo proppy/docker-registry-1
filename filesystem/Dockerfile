@@ -17,9 +17,7 @@ RUN cd /tmp; wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.p
 RUN cd /tmp; python ez_setup.py; easy_install pip; \
     rm ez_setup.py
 
-#TODO: switch to https://github.com/dotcloud/docker-registry.git
-# after https://github.com/dotcloud/docker-registry/pull/308 is in.
-RUN git clone https://github.com/ktintc/docker-registry.git /docker-registry
+RUN git clone https://github.com/dotcloud/docker-registry.git /docker-registry
 
 # Overwrite requirements.txt.
 # We install some of the libs with apt-get to be able to do purge later.
