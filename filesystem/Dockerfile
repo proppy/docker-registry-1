@@ -30,7 +30,7 @@ RUN cd /docker-registry && pip install -r requirements.txt
 # Reduce image size.
 RUN apt-get purge -y --force-yes gcc python-dev liblzma-dev \
     libpython2.7-dev gcc-4.7 libc6-dev \
-    linux-libc-dev git-core python-dev
+    linux-libc-dev git-core
 
 # Overwrite run.sh
 ADD run.sh /docker-registry/run.sh
