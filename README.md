@@ -1,9 +1,12 @@
 docker-registry
 ===============
 
-Sources for [google/docker-registry](https://index.docker.io/u/google/docker-registry/).
+Sources for [google/docker-registry](https://index.docker.io/u/google/docker-registry/), [Docker Registry](https://github.com/dotcloud/docker-registry) image to push/pull your [Docker](https://www.docker.io/) images to/from [Google Cloud Storage](https://cloud.google.com/products/cloud-storage/).
 
-For usage please refer to [google/docker-registry](https://index.docker.io/u/google/docker-registry/).
+- Uses 'gcs' as a storage option
+- Has OAuth2 support built in
+- Works locally and on [Google Compute Engine] (https://cloud.google.com/products/compute-engine/)
+
 
 ### Building google/docker-registry image
 
